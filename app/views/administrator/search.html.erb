@@ -1,0 +1,16 @@
+<h1>Book Search</h1>
+
+
+<div>
+<h4>Search by Title <h4>
+<%= form_tag(books_path, method: :get) do %>
+<%= text_field_tag(:title, params[:search]) %>
+<h4>Search by Author <h4>
+<%= text_field_tag(:author, params[:author]) %>
+<h4>Search by ISBN <h4>
+<%= text_field_tag(:isbn, params[:isbn]) %>
+<%= button_tag 'Search', value: 1, type: :submit, name: :search %>
+<% end%> 
+</div>
+
+<%= link_to 'Back', "/administrator/index" %>

@@ -1,0 +1,18 @@
+<h1>Book</h1>
+
+<p> <strong>Title:</strong> <%= @book.title %>
+</p>
+<p> <strong>Author:</strong> <%= @book.author %>
+</p>
+<p> <strong>ISBN:</strong> <%= @book.isbn%>
+</p>
+
+<h2>Reviews</h2>
+<% @book.reviews.each do |review| %>
+<p> <strong>Reviewer:</strong> <%= review.reviewer %>
+</p>
+<p> <strong>Review:</strong> <%= review.body %>
+</p>
+<% end %>
+
+<td><%= link_to 'Return to Search', "/patron/index" %></td> </tr>
